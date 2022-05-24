@@ -1,7 +1,3 @@
-from asyncio.windows_events import NULL
-from tkinter import Y
-
-
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -43,6 +39,19 @@ x.right = v
 #
 
 
+def treeScanner(root):
+    if not (root.left and root.right):
+        return [root.val]
+    else:
+        newlist = [root.val]
+        left = treeScanner(root.left)
+        right = treeScanner(root.right)
+        return newlist + left + right
+
+
+print(treeScanner(a))
+
+
 def isSymmetric(root):
     if root.left.val != root.right.val:
         return False
@@ -61,4 +70,4 @@ def isSymmetric(root):
         print(layerR)
 
 
-isSymmetric(z)
+# isSymmetric(z)
