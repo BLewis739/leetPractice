@@ -13,13 +13,35 @@ def threeSum(nums):
                             thirdTarget = nums[k]
                             print([firstTarget, secondTarget, thirdTarget])
                             if firstTarget + secondTarget + thirdTarget == 0:
-                                allArrs.append(
-                                    [firstTarget, secondTarget, thirdTarget])
-                                print(allArrs)
+                                if len(allArrs) > 0:
+                                    print("firstTarget " + str(firstTarget))
+                                    addIt = True
+                                    for z in range(len(allArrs)):
+                                        print("All Arrs index " +
+                                              str(z))
+                                        print(allArrs[z])
+                                        if firstTarget in allArrs[z]:
+                                            print('ho')
+                                            if secondTarget in allArrs[z]:
+                                                print('hey')
+                                                if thirdTarget in allArrs[z]:
+                                                    print("Already in")
+                                                    addIt = False
+                                                    break
+                                    if addIt:
+                                        allArrs.append(
+                                            [firstTarget, secondTarget, thirdTarget])
+                                        print("All Arrs")
+                                        print(allArrs)
+                                else:
+                                    allArrs.append(
+                                        [firstTarget, secondTarget, thirdTarget])
+                                    print("All Arrs")
+                                    print(allArrs)
         return allArrs
 
 
-testList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+testList = [-1, 0, 1, 2, -1, -4]
 
 print(threeSum(testList))
 
