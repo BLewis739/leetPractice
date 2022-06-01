@@ -41,7 +41,7 @@ def threeSum(nums):
         return allArrs
 
 
-testList = [-1, 0, 1, 2, -1, -4]
+testList = [-4, -2, 1, -5, -4, -4, 4, -2, 0, 4, 0, -2, 3, 1, -5, 0]
 
 print(threeSum(testList))
 
