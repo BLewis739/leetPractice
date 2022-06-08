@@ -50,6 +50,7 @@ failedTestList = [82597,-9243,62390,83030,-97960,-26521,-61011,83390,-38677,1233
 
 print(threeSum(testList))
 
+print("yes")
 
 def threeSumNoNotes(nums):
     if len(nums) < 3:
